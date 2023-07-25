@@ -55,7 +55,7 @@ const MyForm = () => {
 					></textarea>
 				</div>
 				<div className={styles.buttons}>
-					<button className='btn' type='submit' onClick={sendMess}>
+					<button className='btn' onClick={sendMess}>
 						Отправить
 					</button>
 				</div>
