@@ -11,7 +11,7 @@ const MyForm = () => {
 
 	async function sendMess() {
 		try {
-			await axios.post('http://localhost:3000/api/send-request', {
+			await axios.post(`${process.env.API_HOST}/send-request`, {
 				userName,
 				userEmail,
 				userPhone,
