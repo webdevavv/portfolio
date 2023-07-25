@@ -25,7 +25,7 @@ const MyForm = () => {
 		}
 	}
 	return (
-		<form className={styles.form} onSubmit={sendMess}>
+		<form className={styles.form}>
 			<div className={styles.inputs__wrapper}>
 				<div className={styles.inputs}>
 					<input
@@ -55,7 +55,7 @@ const MyForm = () => {
 					></textarea>
 				</div>
 				<div className={styles.buttons}>
-					<button className='btn' type='submit'>
+					<button className='btn' type='button' onClick={sendMess}>
 						Отправить
 					</button>
 				</div>

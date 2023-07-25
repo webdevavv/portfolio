@@ -1,9 +1,9 @@
+import MyButton from '@/components/UI/button/MyButton'
 import Image from 'next/image'
 import React from 'react'
 import { Link } from 'react-scroll'
 import MyPhoto from '../../../../public/myPhoto.jpg'
 import styles from './AboutMe.module.scss'
-import MyButton from '@/components/UI/button/MyButton'
 
 export default function AboutMe() {
 	return (
@@ -26,7 +26,7 @@ export default function AboutMe() {
 					</MyButton>
 				</div>
 				<div className={styles.image}>
-					<Image src={MyPhoto} alt='Мое Фото' priority={true} />
+					<Image src={MyPhoto} alt='Мое Фото' />
 				</div>
 			</div>
 		</div>
