@@ -43,7 +43,7 @@ const MyForm = () => {
 					<input
 						className='input'
 						type='tel'
-						placeholder='Введите телефон'
+						placeholder='Введите номер телефона'
 						onChange={e => setUserPhone(e.target.value)}
 					/>
 				</div>
