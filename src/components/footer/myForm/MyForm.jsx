@@ -8,8 +8,7 @@ const MyForm = () => {
 	const [userPhone, setUserPhone] = useState('')
 	const [userMess, setUserMess] = useState('')
 
-	async function sendMess(e) {
-		e.preventDefault()
+	async function sendMess() {
 		try {
 			await axios.post('api/send-request', {
 				userName,
@@ -26,7 +25,7 @@ const MyForm = () => {
 		}
 	}
 	return (
-		<form className={styles.form}>
+		<form className={styles.form} onSubmit={sendMess}>
 			<div className={styles.inputs__wrapper}>
 				<div className={styles.inputs}>
 					<input
@@ -56,7 +55,7 @@ const MyForm = () => {
 					></textarea>
 				</div>
 				<div className={styles.buttons}>
-					<button className='btn' onClick={sendMess}>
+					<button className='btn' type='submit'>
 						Отправить
 					</button>
 				</div>
