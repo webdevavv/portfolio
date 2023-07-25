@@ -1,0 +1,53 @@
+.form{
+  width: 100%;
+}
+.inputs__wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #508178;
+  border-radius: 10px;
+  padding: 60px;
+  grid-template-areas: "i t" "b b";
+  .inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    grid-area: i;
+  }
+  .textAr{
+    width: 100%;
+    grid-area: t;
+    textarea{
+      height: 100%;
+      width: calc(100% - 40px);
+      resize: none;
+    }
+  }
+  .buttons{
+    grid-area: b;
+    align-self: center;
+    justify-self: center;
+  }
+}
+@media (max-width: 740px){
+  .inputs__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .textAr{
+      textarea{
+        height: 200px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 520px){
+  .inputs__wrapper{
+    padding: 40px 30px;
+  }
+}
