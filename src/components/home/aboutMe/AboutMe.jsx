@@ -26,7 +26,7 @@ export default function AboutMe() {
 					</MyButton>
 				</div>
 				<div className={styles.image}>
-					<Image src={MyPhoto} alt='Мое Фото' />
+					<Image src={MyPhoto} alt='Мое Фото' priority={true} />
 				</div>
 			</div>
 		</div>

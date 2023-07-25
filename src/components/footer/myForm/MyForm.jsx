@@ -8,17 +8,15 @@ const MyForm = () => {
 	const [userPhone, setUserPhone] = useState('')
 	const [userMess, setUserMess] = useState('')
 
-	async function sendMess() {
+	async function sendMess(e) {
+		e.preventDefault()
 		try {
-			await axios.post(
-				'https://portfolio-omega-two-42.vercel.app/api/send-request',
-				{
-					userName,
-					userEmail,
-					userPhone,
-					userMess,
-				}
-			)
+			await axios.post('api/send-request', {
+				userName,
+				userEmail,
+				userPhone,
+				userMess,
+			})
 			setUserName('')
 			setUserEmail('')
 			setUserPhone('')
