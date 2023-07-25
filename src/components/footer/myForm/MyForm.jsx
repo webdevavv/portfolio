@@ -11,7 +11,7 @@ const MyForm = () => {
 	async function sendMess() {
 		try {
 			await axios.post(
-				'https://portfolio-9zlq609b8-gaffee38.vercel.app/api/send-request/',
+				'https://portfolio-omega-two-42.vercel.app/api/send-request',
 				{
 					userName,
 					userEmail,
