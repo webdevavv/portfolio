@@ -1,4 +1,3 @@
-import MyButton from '@/components/UI/button/MyButton'
 import axios from 'axios'
 import React, { useState } from 'react'
 import styles from './MyForm.module.scss'
@@ -11,7 +10,7 @@ const MyForm = () => {
 
 	async function sendMess() {
 		try {
-			await axios.post(`${process.env.API_HOST}/send-request`, {
+			await axios.post(`${process.env.API_HOST}/send-request/`, {
 				userName,
 				userEmail,
 				userPhone,
