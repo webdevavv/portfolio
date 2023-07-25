@@ -10,12 +10,15 @@ const MyForm = () => {
 
 	async function sendMess() {
 		try {
-			await axios.post(`${process.env.API_HOST}/api/send-request/`, {
-				userName,
-				userEmail,
-				userPhone,
-				userMess,
-			})
+			await axios.post(
+				'https://portfolio-9zlq609b8-gaffee38.vercel.app/api/send-request/',
+				{
+					userName,
+					userEmail,
+					userPhone,
+					userMess,
+				}
+			)
 			setUserName('')
 			setUserEmail('')
 			setUserPhone('')
